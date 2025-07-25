@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+
+    background-color: #222222;
+    font-family: "VT323";
+
+    /* imagen a la izquierda, ocupa 50% del ancho, altura automática */
+    background-image: url('../resources/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+
+    /* Flex solo para centrar tu contenido dentro del body */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 100px;
+    color:rgb(75, 75, 75);
+    text-decoration: solid;
+    text-shadow: 0 20px 40px rgba(99, 99, 99, 0.1);
+}
+
+.pokeRequest{
+    display: flex;
+    flex-direction: column;
+    font-family:"VT323" ;
+    gap: 20px;
+    background-color: #434343;
+    padding: 100px;
+    border: 1px solid #1b1b1b;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+}
+
+.pSearch{
+    border-radius: 12px;
+    font-family: "VT323";
+    font-size: 40px;
+    background-color: #8f8f8f;
+    color: white;
+}
+
+#inputName{
+    font-family: "VT323";
+    font-size: 30px;
+}
