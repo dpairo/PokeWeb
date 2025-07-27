@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const pokeSearch = document.getElementById('pokeSearch')
     const searchBtn = document.getElementById('search-button')
 
-    const url = "https://pokeapi.co/api/v2/pokemon?limit=10z&offset=0";
+    const url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0";
     fetch(url)
         .then(response => {
             if (!response.ok) {
@@ -11,13 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             return response.json();
         })
-        .then(data => {
-            data.results.forEach(pokemon => {
-                const id = pokemon.url.split("/").filter(Boolean).pop();
-                createPokemon(id);
-
-            });
-            /*console.log(data); // Información completa del resultado*/
+        .then(async data => {
+        for (const pokemon of data.results) {
+            const id = pokemon.url.split("/").filter(Boolean).pop();
+            await createPokemon(id); // Espera a que termine antes de seguir con el siguiente
+        }
         })
         .catch(error => {
             console.error("Error cargando Pokémon:", error);
