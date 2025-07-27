@@ -23,16 +23,19 @@
         }
         header{
             width: 100%;
-            background: url("/Pokedex/resources/fondo.png") no-repeat center/cover;
+            background: url("../resources/fondo.png") no-repeat center/cover;
             padding: 2rem 0;
             text-align: center;
 
         }
         main{
-            display: grid;
-           width: 100%;
-           height: 100%;
-           place-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
         }
         a{
                 text-decoration: none;
@@ -43,61 +46,44 @@
             text-decoration: solid;
             text-shadow: 0 20px 40px rgba(99, 99, 99, 0.1);
         }
-        .pokeRequest{
-            display: flex;
-            flex-direction: column;
-            font-family:"VT323" ;
-            gap: 20px;
-            background-color: #434343;
-            padding: 100px;
-            border: 1px solid #1b1b1b;
-            box-shadow: 0 30px 40px rgba(0, 0, 0, 0.4);
-            border-radius: 12px;
-        }
-        .pSearch{
-            border-radius: 12px;
-            font-family: "VT323";
-            font-size: 40px;
-            background-color: #8f8f8f;
-            color: white;
-        }
-        #inputName{
-            font-family: "VT323";
-            font-size: 30px;
-        }
 
         .collapsed{
             display: none !important;
         }
 
-        .sections {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 100px;
-            padding: 20px;
-            place-items: center;
-            justify-content: center;
-        }
-
-        .sectionBox{
+        .search-container {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-width: 200px;
-            min-height: 200px;
-            background-color: #222222;
-            border-radius: 12px;
-            border: 1px solid #333333;
-            box-shadow: 0 30px 40px rgba(0, 0, 0, 0.4);
-            padding: 10px;
+            border: 1px solid #222222;
+            border-radius: 100px;
+            overflow: hidden;
+            background-color: #434343;
+            box-shadow: 0 13px 6px rgba(0,0,0,0.1);
         }
 
-        .sectionBox h3{
-            font-size: 50px;
+        .poke-search {
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            flex: 1;
+            outline: none;
+            background-color: #434343;
+            font-family: "VT323" ;
+            font-size: 20px;
             color: white;
         }
 
+        .search-button {
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #434343;
+        }
+        .search-button img{
+            width: 30px;
+            height: auto;
+        }
         .pokemonList{
             display: flex;
             flex-direction: column;
@@ -111,6 +97,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            width: 100%;
             transition: 0.5s;
             border: #8f8f8f solid 5px;
         }
@@ -123,8 +110,8 @@
             height: 50px;
         }
         .pokemonList img{
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
         }
         .pokemonList p{
             text-decoration: solid;
@@ -169,15 +156,95 @@
             margin: 0;
         }
         
-        .water {
-            background: #539DDF;
-            box-shadow: 0 0 20px #539DDF;
-        }
+        .bug {
+    background: #92BC2C;
+    box-shadow: 0 0 20px #92BC2C;
+    }
 
-        .fighting {
-            background: #D3425F;
-            box-shadow: 0 0 20px #D3425F;
-        }
+    .dark {
+        background: #595761;
+        box-shadow: 0 0 20px #595761;
+    }
+
+    .dragon {
+        background: #0C69C8;
+        box-shadow: 0 0 20px #0C69C8;
+    }
+
+    .electric {
+        background: #F2D94E;
+        box-shadow: 0 0 20px #F2D94E;
+    }
+
+    .fire {
+        background: #FBA54C;
+        box-shadow: 0 0 20px #FBA54C;
+    }
+
+    .fairy {
+        background: #EE90E6;
+        box-shadow: 0 0 20px #EE90E6;
+    }
+
+    .fighting {
+        background: #D3425F;
+        box-shadow: 0 0 20px #D3425F;
+    }
+
+    .flying {
+        background: #A1BBEC;
+        box-shadow: 0 0 20px #A1BBEC;
+    }
+
+    .ghost {
+        background: #5F6DBC;
+        box-shadow: 0 0 20px #5F6DBC;
+    }
+
+    .grass {
+        background: #5FBD58;
+        box-shadow: 0 0 20px #5FBD58;
+    }
+
+    .ground {
+        background: #DA7C4D;
+        box-shadow: 0 0 20px #DA7C4D;
+    }
+
+    .ice {
+        background: #75D0C1;
+        box-shadow: 0 0 20px #75D0C1;
+    }
+
+    .normal {
+        background: #A0A29F;
+        box-shadow: 0 0 20px #A0A29F;
+    }
+
+    .poison {
+        background: #B763CF;
+        box-shadow: 0 0 20px #B763CF;
+    }
+
+    .psychic {
+        background: #FA8581;
+        box-shadow: 0 0 20px #FA8581;
+    }
+
+    .rock {
+        background: #C9BB8A;
+        box-shadow: 0 0 20px #C9BB8A;
+    }
+
+    .steel {
+        background: #5695A3;
+        box-shadow: 0 0 20px #5695A3;
+    }
+
+    .water {
+        background: #539DDF;
+        box-shadow: 0 0 20px #539DDF;
+    }
    </style>
 </head>
 <body>
@@ -188,90 +255,16 @@
     </header>
 
     <main>
-        <form action="submit" id="pokeForm" class="pokeRequest collapsed">
-            <input type="text" name="inputName" id="inputName" placeholder="nombre/numero de pokedex" required>
-            <button type="submit" class="pSearch">Buscar Pokémon</button>
-        </form>
-        <div class="sections collapsed" id="sections">
-            <div class="sectionBox" id="pokedexSection">
-                <img src="/Pokedex/resources/pokedex.png" alt="pokedexIcon" width="100px" height="100px">
-                <h3>Pokedex</h3>
-            </div>
-            <div class="sectionBox" id="pokedexSection">
-                <img src="/Pokedex/resources/pokedex.png" alt="pokedexIcon" width="100px" height="100px">
-                <h3>Pokedex</h3>
-            </div>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar por nombre/id" class="poke-search" id="pokeSearch"/>
+            <button class="search-button" id="search-button">
+                <img src="../resources/Lupa_EP.png" alt="Lupa_EP">
+            </button>
         </div>
 
-        <div class="pokemonList">
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-                <div class="icon water">
-                    <img src="/Pokedex/pokemon-type-svg-icons/icons/water.svg" />
-                </div>
-                <div class="icon fighting">
-                    <img src="/Pokedex/pokemon-type-svg-icons/icons/fighting.svg" />
-                </div>
-            </a>
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-            </a>
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-            </a>
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-            </a>
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-            </a>
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-            </a>
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-            </a>
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-            </a>
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-            </a>
-            <a href="" class="preview">
-                <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-                <p>Polirwath</p>
-            </a>
-
-        </div>
-
-        <div class="pokemon collapsed">
-            <img src="/Pokedex/resources/poli.png" alt="poliwarth">
-            <div class="name">
-                <h4>Polirwath</h4>
-                <div class="types">
-                    <div class="icon water">
-                        <img src="/Pokedex/pokemon-type-svg-icons/icons/water.svg" />
-                    </div>
-                    <div class="icon fighting">
-                        <img src="/Pokedex/pokemon-type-svg-icons/icons/fighting.svg" />
-                    </div>
-                </div>
-            </div>
-            <div class="iv">
-                
-            </div>
+        <div class="pokemonList" id="pokemonList">
         </div>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
