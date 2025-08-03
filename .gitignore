@@ -1,0 +1,42 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Rust build output
+/target/
+
+# Backup and temporary files
+**/*.rs.bk
+*~
+*.swp
+
+# Cargo lock (ignore for libraries, keep for binaries if desired)
+Cargo.lock
+
+# Rust toolchain files (if not meant to be versioned)
+/rust-toolchain
+/rust-toolchain.toml
+rust-toolchain.override
+
+# IDE and editor directories
+.idea/
+*.iml
+.vscode/
+
+# Environment variable files
+.env
+.env.*.local
+
+# Log files
+*.log
+
+# Rust metadata and artifacts
+**/*.rmeta
+*.rlib
+
+# Node/NPM (if frontend present)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
