@@ -4,7 +4,7 @@
 .LSOverride
 
 # Rust build output
-/target/
+**/target/
 
 # Backup and temporary files
 **/*.rs.bk
@@ -15,8 +15,8 @@
 Cargo.lock
 
 # Rust toolchain files (if not meant to be versioned)
-/rust-toolchain
-/rust-toolchain.toml
+rust-toolchain
+rust-toolchain.toml
 rust-toolchain.override
 
 # IDE and editor directories
