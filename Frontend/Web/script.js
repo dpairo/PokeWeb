@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         typeContainer.classList.add('icon', typeName); // útil si tienes estilos CSS por tipo
 
                         const typeIcon = document.createElement('img');
-                        typeIcon.src = `../resources/TypeIcons/icons/${typeName}.svg`;
+                        typeIcon.src = `../resources/icons/${typeName}.svg`;
                         typeIcon.alt = typeName;
 
                         typeContainer.appendChild(typeIcon);
