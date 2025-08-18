@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const pokeSearch = document.getElementById('pokeSearch')
     const searchBtn = document.getElementById('search-button')
 
-    const url = "https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0";
+    const url = "https://pokeapi.co/api/v2/pokemon?limit=50&offset=0";
     fetch(url)
         .then(response => {
             if (!response.ok) {

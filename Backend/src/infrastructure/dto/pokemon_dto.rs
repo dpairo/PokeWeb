@@ -1,5 +1,5 @@
 use serde::Deserialize;
-use crate::infrastructure::DTO::shared::named_api_resource;
+use crate::infrastructure::dto::shared::named_api_resource::NamedAPIResource;
 
 #[derive(Deserialize, Debug, Clone)]
 pub struct PokemonDTO {

@@ -1,3 +1,4 @@
+use crate::infrastructure::dto::pokemon_dto::PokemonDTO;
 #[derive(Debug, Clone)]
 struct Ability {
     name: String,
@@ -24,4 +25,8 @@ pub struct Pokemon {
     typing: Vec<String>,
     evolution_chain: Vec<String>,
     abilities: Vec<Ability>
+}
+
+impl Pokemon {
+    
 }
