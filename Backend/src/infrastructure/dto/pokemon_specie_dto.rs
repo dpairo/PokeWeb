@@ -4,7 +4,7 @@ use crate::infrastructure::dto::shared::named_api_resource::{
     EvolutionAPIResource,
 };
 
-#[derive(Deserialize, Debug, Clone)]
+#[derive(Deserialize, Debug, Clone, Default)]
 pub struct PokemonSpeciesDTO {
     pub id: u16,
     pub name: String,
@@ -15,5 +15,6 @@ pub struct PokemonSpeciesDTO {
     #[serde(default)]
     pub egg_groups: Vec<NamedAPIResource>,
 
+    #[serde(default)]
     pub evolution_chain: Option<EvolutionAPIResource>,
 }

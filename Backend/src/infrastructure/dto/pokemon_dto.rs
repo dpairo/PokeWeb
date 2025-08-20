@@ -23,7 +23,7 @@ pub struct PokemonDTO {
     pub abilities: Vec<PokemonAbilityDTO>,
 }
 
-#[derive(Deserialize, Debug, Clone)]
+#[derive(Deserialize, Debug, Clone, Default)]
 pub struct PokemonStatDTO {
     pub base_stat: u16,
     pub effort: u8,

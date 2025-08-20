@@ -1,6 +1,6 @@
 use serde::Deserialize;
 
-#[derive(Deserialize, Debug, Clone, Eq, PartialEq, Hash)]
+#[derive(Deserialize, Debug, Clone, Eq, PartialEq, Hash, Default)]
 pub struct NamedAPIResource {
     pub name: String,
     pub url: String,
