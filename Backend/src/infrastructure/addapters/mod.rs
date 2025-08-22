@@ -1,1 +1,1 @@
-mod pokemon_mapper;
+pub(crate) mod pokemon_mapper;
